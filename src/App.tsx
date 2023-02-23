@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="min-w-[100vw] min-h-[100vh] bg-ui-lightest text-ui-darkest">
+    <div className="min-w-[100vw] min-h-[100vh] overflow-x-hidden bg-ui-lightest text-ui-darkest">
       <ToastContainer />
       <Routes>
         <Route path="/login" element={<Login />} />

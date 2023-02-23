@@ -8,7 +8,7 @@ export const Login = () => {
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
       <header>
-        <h1 className="text-4xl font-bold">Welcome to Your Project</h1>
+        <h1 className="text-4xl font-bold">Welcome to Big Sheet</h1>
       </header>
       {/* a login with google button */}
       <div className="flex items-center justify-center gap-x-4 mt-4">
