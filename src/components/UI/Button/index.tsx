@@ -13,9 +13,12 @@ export const Button = ({className, ...rest}: Props) => {
         "bg-ui-dark text-ui-lightest px-4 py-2 rounded-md",
         "hover:bg-ui-darker",
         "active:bg-ui-darkest",
-        "disabled:bg-ui-lightest disabled:text-ui-lightest disabled:cursor-not-allowed",
+        "disabled:cursor-not-allowed disabled:opacity-70",
         className
       )}
     />
   );
 };
+
+//q: what is the sql command to get users where age is greater than 40
+//a: SELECT * FROM users WHERE age > 40
