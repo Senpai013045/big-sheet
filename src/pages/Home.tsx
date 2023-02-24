@@ -1,9 +1,9 @@
 import {useState} from "react";
 import {truncate} from "../utils/string";
-import Editor from "@monaco-editor/react";
 import {Button} from "../components/UI/Button";
 import {TableLister} from "../components/Composite/TableLister";
 import {RowData, Table} from "../components/UI/Table";
+import {SQLEditor} from "../components/Composite/SQLEditor";
 
 const FAKEDATA: RowData[] = [
   {
@@ -88,6 +88,7 @@ export const Home = () => {
               <div className="font-bold p-4 text-ui-dark">Input</div>
               <Button
                 className="px-6"
+                disabled={!file || !code}
                 onClick={() => {
                   if (!file) return;
                   setData(FAKEDATA);
@@ -96,21 +97,7 @@ export const Home = () => {
                 Run
               </Button>
             </nav>
-            <Editor
-              height="300px"
-              language="sql"
-              value={code}
-              onChange={val => {
-                if (val) {
-                  setCode(val);
-                }
-              }}
-              options={{
-                minimap: {
-                  enabled: false,
-                },
-              }}
-            />
+            <SQLEditor value={code} onChange={setCode} disabled={Boolean(!file)} />
           </div>
           <div className="mt-4">
             <Table data={data} />
